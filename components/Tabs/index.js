@@ -30,8 +30,8 @@ function tabby(data){
 
 axios.get('https://lambda-times-backend.herokuapp.com/topics')
 .then(response => {
-  console.log(response.data.topics)
-  console.log(response.data)
+//   console.log(response.data.topics)
+//   console.log(response.data)
     topicsArray = response.data.topics;
     topicsArray.forEach(data => {
         newContainer.appendChild(tabby(data))
