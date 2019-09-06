@@ -49,9 +49,7 @@
 
  }
  const cardContain = document.querySelector('.cards-container')
-//  cardContain.appendChild(cards())
 
-// let newArticle = ['javascript', 'bootstrap', '']
 
  axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
@@ -59,7 +57,9 @@
 //   console.log(response.data.articles.javascript)
   console.log(response.data.articles)
     articleArray = response.data.articles.bootstrap;
-        cardContain.appendChild(cards(articleArray[0]))
+        articleArray.forEach(item =>{
+            cardContain.appendChild(cards(item))
+        })
     
 })
 
@@ -70,11 +70,13 @@
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
-  console.log(response.data.articles.bootstrap[0])
+  console.table(response.data.articles.bootstrap[0])
   console.log(response.data.articles.javascript)
   console.log(response.data.articles)
     articleArray = response.data.articles.javascript;
-        cardContain.appendChild(cards(articleArray[0]))
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
     
 })
 
@@ -84,11 +86,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
-  console.log(response.data.articles.bootstrap[0])
-  console.log(response.data.articles.javascript)
-  console.log(response.data.articles)
     articleArray = response.data.articles.technology;
-        cardContain.appendChild(cards(articleArray[0]))
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
+        
     
 })
 
@@ -97,12 +99,11 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 } )
 axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
-  console.log(response.data.articles.bootstrap[0])
-  console.log(response.data.articles.javascript)
-  console.log(response.data.articles)
     articleArray = response.data.articles.jquery;
-        cardContain.appendChild(cards(articleArray[0]))
-    
+       
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
 })
 
 .catch(error=>{
@@ -110,11 +111,10 @@ axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 } )
 axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
-  console.log(response.data.articles.bootstrap[0])
-  console.log(response.data.articles.javascript)
-  console.log(response.data.articles)
     articleArray = response.data.articles.node;
-        cardContain.appendChild(cards(articleArray[0]))
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
     
 })
 

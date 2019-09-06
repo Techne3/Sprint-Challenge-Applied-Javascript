@@ -39,7 +39,7 @@ The DOM which stand for document object model, Is a tree like structure that rep
 
 3. What is an event listener?
 
-An event listener works with events to 'listen' for certain programmed interactions within the page. When the even listener detects an event it will respond accordingly and fire a function that will change the element it was tied to.
+An event listener works with events to 'listen' for certain programmed interactions within the page. When the event listener detects an event it will respond accordingly and fire a function that will change the element it was tied to.
 
 
 
