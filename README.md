@@ -30,13 +30,29 @@ Edit this document to include your answers after each question. Make sure to lea
 
 1. What is the DOM?
 
+The DOM which stand for document object model, Is a tree like structure that represents the entire HTML. The DOM is made up of nodes and their children and siblings  that can be accessed and then manipulated within JavaScript. With the use of functions we are able to create and manipulate the style and actions directly from the DOM which in turn makes the web page or application more interactive and fluid. 
+
 2. What is an event?
+
+ An event is an action that occurs when the user of an application manipulates the page. Basically it is a interaction between the user and the user interface.  events such as a mouseup/down and click helps to build a more dynamic and interactive website. 
+
 
 3. What is an event listener?
 
+An event listener works with events to 'listen' for certain programmed interactions within the page. When the even listener detects an event it will respond accordingly and fire a function that will change the element it was tied to.
+
+
+
 4. Why would we convert a NodeList into an Array?
 
+Nodelist, although array like, do not have access to array methods. This makes working with Nodelist far less powerful then simply converting them into an array which has better tools to deal with these data types such as .filer(), .map(), and .forEach().
+
+
+
 5. What is a component?
+
+Components work in tandem with HTML/CSS/JS to create reuseable pieces of code. This makes it easier to later recall these  pieces of code when needed and makes the code modular. When using components we keep the code dry since we are not rewriting the same code for similar items.
+
 
 ### Git Set up
 
