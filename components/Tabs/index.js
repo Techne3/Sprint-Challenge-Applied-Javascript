@@ -13,14 +13,10 @@ const newContainer = document.querySelector('.topics')
 function tabby(data){
     const newTab = document.createElement('div')
 
-    // newTab.appendChild(newContainer)
     newTab.classList.add('tab')
 
-
-''
     newTab.textContent=`${data}`
 
-    // `${data}`
 
     return newTab
 

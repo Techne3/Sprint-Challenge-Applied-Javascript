@@ -51,70 +51,33 @@
  const cardContain = document.querySelector('.cards-container')
 
 
+
+
+
  axios.get('https://lambda-times-backend.herokuapp.com/articles/')
 .then(response => {
-//   console.log(response.data.articles.bootstrap[0])
-//   console.log(response.data.articles.javascript)
-  console.log(response.data.articles)
-    articleArray = response.data.articles.bootstrap;
-        articleArray.forEach(item =>{
-            cardContain.appendChild(cards(item))
-        })
-    
-})
 
-.catch(error=>{
-  console.log("This looks wrong", error)
-} )
-  
-
-axios.get('https://lambda-times-backend.herokuapp.com/articles/')
-.then(response => {
-  console.table(response.data.articles.bootstrap[0])
-  console.log(response.data.articles.javascript)
-  console.log(response.data.articles)
-    articleArray = response.data.articles.javascript;
-    articleArray.forEach(item =>{
-        cardContain.appendChild(cards(item))
-    })
-    
-})
-
-.catch(error=>{
-  console.log("This looks wrong", error)
-} )
-
-axios.get('https://lambda-times-backend.herokuapp.com/articles/')
-.then(response => {
+    console.log(response.data.articles)
     articleArray = response.data.articles.technology;
     articleArray.forEach(item =>{
         cardContain.appendChild(cards(item))
     })
-        
-    
-})
-
-.catch(error=>{
-  console.log("This looks wrong", error)
-} )
-axios.get('https://lambda-times-backend.herokuapp.com/articles/')
-.then(response => {
     articleArray = response.data.articles.jquery;
-       
     articleArray.forEach(item =>{
         cardContain.appendChild(cards(item))
     })
-})
-
-.catch(error=>{
-  console.log("This looks wrong", error)
-} )
-axios.get('https://lambda-times-backend.herokuapp.com/articles/')
-.then(response => {
     articleArray = response.data.articles.node;
     articleArray.forEach(item =>{
         cardContain.appendChild(cards(item))
     })
+    articleArray = response.data.articles.javascript;
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })    
+    articleArray = response.data.articles.bootstrap;
+        articleArray.forEach(item =>{
+            cardContain.appendChild(cards(item))
+        })
     
 })
 

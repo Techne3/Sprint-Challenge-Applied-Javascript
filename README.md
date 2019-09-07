@@ -47,7 +47,7 @@ An event listener works with events to 'listen' for certain programmed interacti
 
 Nodelist, although array like, do not have access to array methods. This makes working with Nodelist far less powerful then simply converting them into an array which has better tools to deal with these data types such as .filer(), .map(), and .forEach().
 
-
+sprint operator
 
 5. What is a component?
 
