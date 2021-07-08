@@ -17,3 +17,70 @@
 // </div>
 //
 // Create a card for each of the articles and add the card to the DOM.
+
+
+ function cards (data) {
+    const newCard =document.createElement('div')
+    const newHeadline = document.createElement('div')
+    const newAuthor = document.createElement('div');
+    const newImgContainer = document.createElement('div');
+    const newImg =document.createElement('img')
+    const newBy = document.createElement('span')
+
+
+    newCard.appendChild(newHeadline)
+    newCard.appendChild(newAuthor)
+    newAuthor.appendChild(newImgContainer)
+    newImgContainer.appendChild(newImg)
+    newAuthor.appendChild(newBy)
+
+    newCard.classList.add('card')
+    newHeadline.classList.add('headline')
+    newAuthor.classList.add('author')
+    newImgContainer.classList.add('img-container')
+
+    
+    newHeadline.textContent = `${data.headline}`
+    // newAuthor.textContent=`Author: ${data.authorName}`
+    newImg.src=`${data.authorPhoto}`
+    newBy.textContent=`By: ${data.authorName}`
+
+        return newCard
+
+ }
+ const cardContain = document.querySelector('.cards-container')
+
+
+
+
+
+ axios.get('https://lambda-times-backend.herokuapp.com/articles/')
+.then(response => {
+
+    console.log(response.data.articles)
+    articleArray = response.data.articles.technology;
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
+    articleArray = response.data.articles.jquery;
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
+    articleArray = response.data.articles.node;
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })
+    articleArray = response.data.articles.javascript;
+    articleArray.forEach(item =>{
+        cardContain.appendChild(cards(item))
+    })    
+    articleArray = response.data.articles.bootstrap;
+        articleArray.forEach(item =>{
+            cardContain.appendChild(cards(item))
+        })
+    
+})
+
+.catch(error=>{
+  console.log("This looks wrong", error)
+} )
